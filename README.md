@@ -50,3 +50,7 @@ export default tseslint.config({
     ...react.configs['jsx-runtime'].rules,
   },
 })
+=======
+# reactjs-fundamental-apps
+Belajar rect js via vite
+>>>>>>> 83713c4 (Initial commit)

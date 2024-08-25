@@ -10,6 +10,7 @@ interface Props {
     tittle?: string
     imgSource?: string
     btnText?: string
+    price?: number
 }
 
 const CardProduct = (props: Props) => {
@@ -42,10 +43,10 @@ const Body = ( props: Props) : JSX.Element => {
 }
 
 const Footer = (props: Props) => {
-    const { btnText, variant = '', onClickHandler } = props;
+    const { btnText, variant = '', onClickHandler, price } = props;
     return (
         <div className="flex items-center justify-between"> 
-            <span className="py-5 pl-5 text-xl font-bold text-white">Rp. 2.199.000,00</span>
+            <span className="py-5 pl-5 text-xl font-bold text-white">{`Rp. ${price?.toLocaleString('id-ID')},00`}</span>
                 <Button variant = {variant} text='text-white' children={btnText} classname = 'my-5 mr-5' onClick={() => onClickHandler} />
         </div>
     )
